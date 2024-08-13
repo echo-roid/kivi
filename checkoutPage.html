@@ -15,7 +15,7 @@
         <div class="border-bottom p-2 text-center">
             <h6 class="colorccc">Welcome to our store</h6>
         </div>
-        
+
         <div class="checkoutcarticon d-none" id="checkoutpageId">
             <a href="./checkoutPage.html"><img src="./assets/checkout.png" width="30" alt=""></a>
             <span class="checkoutcount" id="checkoutcounT2"></span>
@@ -61,15 +61,35 @@
     </header>
 
 
-    <section class="py-5 border-bottom pb-5 checkoutsection  checkoutcontainersection">
-        <div class="container ">
-            <div class="mb-2">
-                <button type="button" id="Continue" class="btn btn-success fs-6" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">Continue</button>
+    <section class=" border-bottom  checkoutsection  checkoutcontainersection">
+        <div class="container-fluid ps-4">
+            <div class="d-flex productscreen">
+                <div class="productboxwidth py-5 pb-5">
+                    <div class="mb-2">
+                        <button type="button" id="Continue" class="btn btn-success fs-6" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Continue</button>
+                    </div>
+                   
+                        <div class="row" id="checkouwrapper">
+        
+                        </div>
+                </div>
+                
+                <div class="amountDEtails p-4 px-2 ms-2">
+                    <h6 class="font700">Details</h6>
+                    <p class="mb-2 lh-1 font14px" id="itemsT">Total Items:</p>
+                    <p class="mb-2 lh-1 font14px" id="Delivery">Delivery Fees:</p>
+                    <p class="mb-0 lh-1 font14px" id="coupon">coupon : No</p>
+                    <span class="font11px lh-1 font700 mb-4 d-inline-block font8px">If you buy above ₹999, delivery is
+                        free</span>
+                    <h6 id="AmountT">Total Mount:</h6>
+                </div>
             </div>
-            <div class="row" id="checkouwrapper">
+           
 
-            </div>
+             
+
+
         </div>
     </section>
 
@@ -133,7 +153,8 @@
                                 <label for="">Full Address</label>
                                 <span>Full Address</span>
                             </div>
-                            <input type="button" class="w-100 p-2 border-0" value="Send" class="btn" onclick="orderplace()" />
+                            <input type="button" class="w-100 p-2 border-0" value="Send" class="btn"
+                                onclick="orderplace()" />
                         </div>
                     </div>
                 </div>
@@ -152,76 +173,76 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-        </script>
-        <script src="./js/index.js"></script>
-
-        
-        <script type="text/javascript">
-            (function () {
-                emailjs.init({
-                    publicKey: "rvZRnI7kUBqB9Z4PH",
-                });
-            })();
-        </script>
-        <script>
-            function orderplace() {
-                let productsend=[]
-                JSON.parse(localStorage.getItem('ProductKey')).forEach(element => {
-                    productsend.push([element.id,
-                    element.count])
-                });
-                emailjs.send("service_8cyktrv", "template_cjzh1zy", {
-                    from_name: document.getElementById("name").value,
-                    from_email: document.getElementById("email").value,
-                    message: document.getElementById("address").value,
-                    from_number: document.getElementById("number").value,
-                    from_order:productsend,
-                });
-                    setTimeout(()=>{
-                        localStorage.clear();
-                        window.location.href ="./thnakyou.html";
-                    },5000)  
-                
-            }
-    
-        </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="./js/index.js"></script>
 
 
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "rvZRnI7kUBqB9Z4PH",
+            });
+        })();
+    </script>
+    <script>
+        function orderplace() {
+            let productsend = []
+            JSON.parse(localStorage.getItem('ProductKey')).forEach(element => {
+                productsend.push([element.id,
+                element.count, element.size])
+            });
+            emailjs.send("service_8cyktrv", "template_cjzh1zy", {
+                from_name: document.getElementById("name").value,
+                from_email: document.getElementById("email").value,
+                message: document.getElementById("address").value,
+                from_number: document.getElementById("number").value,
+                from_order: productsend,
+            });
+            setTimeout(() => {
+                localStorage.clear();
+                window.location.href = "./thankyou.html";
+            }, 5000)
 
-<script>
-    const inputs = document.querySelectorAll(".input");
-
-    function focusFunc() {
-        let parent = this.parentNode;
-        parent.classList.add("focus");
-    }
-
-    function blurFunc() {
-        let parent = this.parentNode;
-        if (this.value == "") {
-            parent.classList.remove("focus");
         }
-    }
 
-    inputs.forEach((input) => {
-        input.addEventListener("focus", focusFunc);
-        input.addEventListener("blur", blurFunc);
-    });
-
-</script>
-
-<script>
-    function addCard() {
-
-if (localStorage.getItem("ProductKey")) {
-
-    JSON.parse(localStorage.getItem("ProductKey")).forEach((element, index) => {
+    </script>
 
 
 
-        var newElement = document.createElement('div');
-        let html = ` <div class="col-md-3 mb-4 position-relative myElement" data-product='${element?.id}'>
+    <script>
+        const inputs = document.querySelectorAll(".input");
+
+        function focusFunc() {
+            let parent = this.parentNode;
+            parent.classList.add("focus");
+        }
+
+        function blurFunc() {
+            let parent = this.parentNode;
+            if (this.value == "") {
+                parent.classList.remove("focus");
+            }
+        }
+
+        inputs.forEach((input) => {
+            input.addEventListener("focus", focusFunc);
+            input.addEventListener("blur", blurFunc);
+        });
+
+    </script>
+
+    <script>
+        function addCard() {
+
+            if (localStorage.getItem("ProductKey")) {
+
+                JSON.parse(localStorage.getItem("ProductKey")).forEach((element, index) => {
+
+
+
+                    var newElement = document.createElement('div');
+                    let html = ` <div class="col-md-3 mb-4 position-relative myElement" data-product='${element?.id}'>
             <div>
                 <img src='${element?.img}' class="w-100 productimg" alt="">
             </div>
@@ -230,7 +251,7 @@ if (localStorage.getItem("ProductKey")) {
                 <div class="">
                     <p class="mb-0">Oversized tshirt</p>
                     <p class="mb-0">Color : '${element?.color}'</p>
-                    <p class="mb-0">Size : ${element?.size}</p>
+                    <p class="mb-0">Selected size : ${element?.size}</p>
                 </div>
                     
                 <p class="mb-0 font700 colorccc">'${element?.price}'</p>
@@ -245,26 +266,137 @@ if (localStorage.getItem("ProductKey")) {
            
              <img src="./assets/delete.png" class="deletepro" width="10" onclick="deleteitem('${element?.id}')" alt="">
         </div>`
-        if(document.getElementById("checkouwrapper")){
-            document.getElementById("checkouwrapper").insertAdjacentHTML('beforeend', html);
-        }
-    });
-}
-
-        try {
-            if( JSON.parse(localStorage.getItem("ProductKey")).length > 0){
-                document.getElementById("Continue").style.display = "block"
+                    if (document.getElementById("checkouwrapper")) {
+                        document.getElementById("checkouwrapper").insertAdjacentHTML('beforeend', html);
+                    }
+                });
             }
-        } catch (error) {
-            console.log(error)
+
+            try {
+                if (JSON.parse(localStorage.getItem("ProductKey")).length > 0) {
+                    document.getElementById("Continue").style.display = "block"
+                }
+            } catch (error) {
+                console.log(error)
+            }
+
+
+            let totalAmount = 0;
+            let products = JSON.parse(localStorage.getItem("ProductKey"));
+
+            for (let index = 0; index < products.length; index++) {
+                totalAmount +=  parseInt(products[index].staticprice);
+            }
+
+            document.getElementById("AmountT").innerHTML = "Total Amount: ₹" + totalAmount;
+
+            document.getElementById("itemsT").innerHTML = "Total Items : " + products.length
+
+            if(totalAmount >999){
+                    document.getElementById("Delivery").innerHTML = "Delivery Fees: 0"
+            }   
+            else{
+                    document.getElementById("Delivery").innerHTML = "Delivery Fees: ₹50"
+            }
+           
+            
         }
 
+
+        addCard()
+
+
+        
+function incrementValue(e) {
+
+    
+e.preventDefault();
+
+var fieldName = $(e.target).data("field");
+var parent = $(e.target).closest("div");
+var currentVal = parseInt(
+    parent.find("input[name=" + fieldName + "]").val(),
+    10
+);
+
+if (!isNaN(currentVal)) {
+    parent.find("input[name=" + fieldName + "]").val(currentVal + 1);
+} else {
+    parent.find("input[name=" + fieldName + "]").val(0);
 }
 
+let storedProducts = JSON.parse(localStorage.getItem('ProductKey')) || [];
 
-addCard()
+for (let i = 0; i < storedProducts.length; i++) {
+    if (storedProducts[i].id === e.target.id.split("plus")[0]) {
+        // Update the count if the ID matches
+        storedProducts[i].count += 1;
+        let static = storedProducts[i].price
+        storedProducts[i].staticprice += static
+      
+        productFound = true;
+        break;
+    }
+}
 
-</script>
+localStorage.setItem('ProductKey', JSON.stringify(storedProducts));
+location.reload()
+}
+
+function decrementValue(e) {
+e.preventDefault();
+var fieldName = $(e.target).data("field");
+var parent = $(e.target).closest("div");
+var currentVal = parseInt(
+    parent.find("input[name=" + fieldName + "]").val(),
+    10
+);
+
+if (!isNaN(currentVal) && currentVal > 0) {
+    parent.find("input[name=" + fieldName + "]").val(currentVal - 1);
+} else {
+    parent.find("input[name=" + fieldName + "]").val(0);
+}
+
+let storedProducts = JSON.parse(localStorage.getItem('ProductKey')) || [];
+
+for (let i = 0; i < storedProducts.length; i++) {
+    if (storedProducts[i].id === e.target.id.split("minus")[0]) {
+        // Update the count if the ID matches
+        if(storedProducts[i].count >= 2){
+            storedProducts[i].count -= 1;
+            let static = storedProducts[i].price
+            storedProducts[i].staticprice -= static
+            productFound = true;
+            break;
+        }
+         else if (storedProducts[i].id === e.target.id.split("minus")[0]) {
+            if(storedProducts[i].count <= 1){
+                storedProducts.splice(i, 1);
+                location.reload();
+               
+            }
+            
+        }
+       
+    }
+}
+
+localStorage.setItem('ProductKey', JSON.stringify(storedProducts));
+location.reload()
+}
+
+$(".input-group").on("click", ".button-plus", function (e) {
+
+incrementValue(e);
+
+});
+
+$(".input-group").on("click", ".button-minus", function (e) {
+decrementValue(e);
+});
+
+    </script>
 </body>
 
 </html>

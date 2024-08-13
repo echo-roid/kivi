@@ -38,6 +38,9 @@ h1,h2,h3,h4,h5,h5,h6,p,span,li,button{
     font-weight: 700;
 }
 
+.font8px{
+  font-size: 8px;
+}
 
 .colorccc{
     color: #555151;
@@ -212,6 +215,38 @@ header{
     opacity: 0;
 }
 
+.dropdown-menu-cus{
+  position: absolute;
+  top: 40px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  width: 100px;
+  padding: 10px;
+  display: none;
+  z-index: 3;
+  background-color: white;
+}
+.selectsize{
+  font-size: 8px;
+  padding: 2px 4px;
+
+}
+
+.productboxwidth{
+  width: 85%;
+}
+
+.amountDEtails{
+  width: 15%;
+  background-color: #f8f9fa;
+}
+
+.productscreen{
+  flex-direction: column-reverse;
+  margin-top: 100px;
+}
+
+
+
 @media (max-width:500px) {
     .wrapsubscribe {
         width: 90%;
@@ -256,8 +291,24 @@ header{
         margin-bottom: 25px!important;
     }
     .checkoutcontainersection{
-        margin-top: 70px;
+        margin-top: 0px;
     }
+    .amountDEtails{
+      width: 100%;
+      border-top: 1px solid black;
+      margin-left: 0!important;
+      
+    }
+    .productboxwidth{
+      width: 100%;
+    }
+    .checkoutsection .container-fluid{
+       padding: 10px!important;
+    }
+    .productboxwidth{
+      padding-top: 10px!important;
+    }
+    
 }
 
 
