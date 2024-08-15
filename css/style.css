@@ -240,10 +240,7 @@ header{
   background-color: #f8f9fa;
 }
 
-.productscreen{
-  flex-direction: column-reverse;
-  margin-top: 100px;
-}
+
 
 
 
@@ -273,8 +270,8 @@ header{
         font-size: 25px;
         font-weight: 500;
     }.px-5 {
-        padding-right: 2rem !important;
-        padding-left: 2rem !important;
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
     }
     .marginmobBottom{
         margin-bottom: 20px;
@@ -307,6 +304,10 @@ header{
     }
     .productboxwidth{
       padding-top: 10px!important;
+    }
+    .productscreen{
+      flex-direction: column-reverse;
+      margin-top: 100px;
     }
     
 }
