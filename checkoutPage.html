@@ -60,9 +60,9 @@
         </div>
     </header>
 
-    
+
     <section class=" border-bottom  checkoutsection  checkoutcontainersection">
-        <button id="rzp-button1">Pay</button>
+       
         <div class="container-fluid ps-4">
             <div class="d-flex productscreen">
                 <div class="productboxwidth py-5 pb-5">
@@ -70,12 +70,12 @@
                         <button type="button" id="Continue" class="btn btn-success fs-6" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">Continue</button>
                     </div>
-                   
-                        <div class="row" id="checkouwrapper">
-        
-                        </div>
+
+                    <div class="row" id="checkouwrapper">
+
+                    </div>
                 </div>
-                
+
                 <div class="amountDEtails p-4 px-2 ms-2">
                     <h6 class="font700">Details</h6>
                     <p class="mb-2 lh-1 font14px" id="itemsT">Total Items:</p>
@@ -86,9 +86,9 @@
                     <h6 id="AmountT">Total Mount:</h6>
                 </div>
             </div>
-           
 
-             
+
+
 
 
         </div>
@@ -154,8 +154,13 @@
                                 <label for="">Full Address</label>
                                 <span>Full Address</span>
                             </div>
-                            <input type="button" class="w-100 p-2 border-0" value="Send" class="btn"
-                                onclick="orderplace()" />
+                            <input type="button" class="w-100 p-2 submitButton border-0" value="Pay" class="btn" 
+                                onclick="orderplace(this)" />
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="spinner-border text-primary" role="status" id="spinner">
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -187,24 +192,14 @@
         })();
     </script>
     <script>
-        function orderplace() {
-            let productsend = []
-            JSON.parse(localStorage.getItem('ProductKey')).forEach(element => {
-                productsend.push([element.id,
-                element.count, element.size])
-            });
-            emailjs.send("service_8cyktrv", "template_cjzh1zy", {
-                from_name: document.getElementById("name").value,
-                from_email: document.getElementById("email").value,
-                message: document.getElementById("address").value,
-                from_number: document.getElementById("number").value,
-                from_order: productsend,
-            });
-            setTimeout(() => {
-                localStorage.clear();
-                window.location.href = "./thankyou.html";
-            }, 5000)
-
+        function orderplace(val) {
+            
+            val.style.display = "none"
+            document.getElementById("spinner").style.display = "block"
+            setTimeout(()=>{
+                document.getElementById("exampleModal").style.display="none"
+            },2000)
+            paytome()
         }
 
     </script>
@@ -286,164 +281,143 @@
             let products = JSON.parse(localStorage.getItem("ProductKey"));
 
             for (let index = 0; index < products.length; index++) {
-                totalAmount +=  parseInt(products[index].staticprice);
+                totalAmount += parseInt(products[index].staticprice);
             }
 
             document.getElementById("AmountT").innerHTML = "Total Amount: ₹" + totalAmount;
 
             document.getElementById("itemsT").innerHTML = "Total Items : " + products.length
 
-            if(totalAmount >999){
-                    document.getElementById("Delivery").innerHTML = "Delivery Fees: 0"
-            }   
-            else{
-                    document.getElementById("Delivery").innerHTML = "Delivery Fees: ₹50"
+            if (totalAmount > 999) {
+                document.getElementById("Delivery").innerHTML = "Delivery Fees: 0"
             }
-           
-            
+            else {
+                document.getElementById("Delivery").innerHTML = "Delivery Fees: ₹50"
+            }
+
+
         }
 
 
         addCard()
 
 
-        
-function incrementValue(e) {
 
-    
-e.preventDefault();
+        function incrementValue(e) {
 
-var fieldName = $(e.target).data("field");
-var parent = $(e.target).closest("div");
-var currentVal = parseInt(
-    parent.find("input[name=" + fieldName + "]").val(),
-    10
-);
 
-if (!isNaN(currentVal)) {
-    parent.find("input[name=" + fieldName + "]").val(currentVal + 1);
-} else {
-    parent.find("input[name=" + fieldName + "]").val(0);
-}
+            e.preventDefault();
 
-let storedProducts = JSON.parse(localStorage.getItem('ProductKey')) || [];
+            var fieldName = $(e.target).data("field");
+            var parent = $(e.target).closest("div");
+            var currentVal = parseInt(
+                parent.find("input[name=" + fieldName + "]").val(),
+                10
+            );
 
-for (let i = 0; i < storedProducts.length; i++) {
-    if (storedProducts[i].id === e.target.id.split("plus")[0]) {
-        // Update the count if the ID matches
-        storedProducts[i].count += 1;
-        let static = storedProducts[i].price
-        storedProducts[i].staticprice += static
-      
-        productFound = true;
-        break;
-    }
-}
-
-localStorage.setItem('ProductKey', JSON.stringify(storedProducts));
-location.reload()
-}
-
-function decrementValue(e) {
-e.preventDefault();
-var fieldName = $(e.target).data("field");
-var parent = $(e.target).closest("div");
-var currentVal = parseInt(
-    parent.find("input[name=" + fieldName + "]").val(),
-    10
-);
-
-if (!isNaN(currentVal) && currentVal > 0) {
-    parent.find("input[name=" + fieldName + "]").val(currentVal - 1);
-} else {
-    parent.find("input[name=" + fieldName + "]").val(0);
-}
-
-let storedProducts = JSON.parse(localStorage.getItem('ProductKey')) || [];
-
-for (let i = 0; i < storedProducts.length; i++) {
-    if (storedProducts[i].id === e.target.id.split("minus")[0]) {
-        // Update the count if the ID matches
-        if(storedProducts[i].count >= 2){
-            storedProducts[i].count -= 1;
-            let static = storedProducts[i].price
-            storedProducts[i].staticprice -= static
-            productFound = true;
-            break;
-        }
-         else if (storedProducts[i].id === e.target.id.split("minus")[0]) {
-            if(storedProducts[i].count <= 1){
-                storedProducts.splice(i, 1);
-                location.reload();
-               
+            if (!isNaN(currentVal)) {
+                parent.find("input[name=" + fieldName + "]").val(currentVal + 1);
+            } else {
+                parent.find("input[name=" + fieldName + "]").val(0);
             }
-            
+
+            let storedProducts = JSON.parse(localStorage.getItem('ProductKey')) || [];
+
+            for (let i = 0; i < storedProducts.length; i++) {
+                if (storedProducts[i].id === e.target.id.split("plus")[0]) {
+                    // Update the count if the ID matches
+                    storedProducts[i].count += 1;
+                    let static = storedProducts[i].price
+                    storedProducts[i].staticprice += static
+
+                    productFound = true;
+                    break;
+                }
+            }
+
+            localStorage.setItem('ProductKey', JSON.stringify(storedProducts));
+            location.reload()
         }
-       
-    }
-}
 
-localStorage.setItem('ProductKey', JSON.stringify(storedProducts));
-location.reload()
-}
+        function decrementValue(e) {
+            e.preventDefault();
+            var fieldName = $(e.target).data("field");
+            var parent = $(e.target).closest("div");
+            var currentVal = parseInt(
+                parent.find("input[name=" + fieldName + "]").val(),
+                10
+            );
 
-$(".input-group").on("click", ".button-plus", function (e) {
+            if (!isNaN(currentVal) && currentVal > 0) {
+                parent.find("input[name=" + fieldName + "]").val(currentVal - 1);
+            } else {
+                parent.find("input[name=" + fieldName + "]").val(0);
+            }
 
-incrementValue(e);
+            let storedProducts = JSON.parse(localStorage.getItem('ProductKey')) || [];
 
-});
+            for (let i = 0; i < storedProducts.length; i++) {
+                if (storedProducts[i].id === e.target.id.split("minus")[0]) {
+                    // Update the count if the ID matches
+                    if (storedProducts[i].count >= 2) {
+                        storedProducts[i].count -= 1;
+                        let static = storedProducts[i].price
+                        storedProducts[i].staticprice -= static
+                        productFound = true;
+                        break;
+                    }
+                    else if (storedProducts[i].id === e.target.id.split("minus")[0]) {
+                        if (storedProducts[i].count <= 1) {
+                            storedProducts.splice(i, 1);
+                            location.reload();
 
-$(".input-group").on("click", ".button-minus", function (e) {
-decrementValue(e);
-});
+                        }
+
+                    }
+
+                }
+            }
+
+            localStorage.setItem('ProductKey', JSON.stringify(storedProducts));
+            location.reload()
+        }
+
+        $(".input-group").on("click", ".button-plus", function (e) {
+
+            incrementValue(e);
+
+        });
+
+        $(".input-group").on("click", ".button-minus", function (e) {
+            decrementValue(e);
+        });
 
     </script>
 
 
 
-<!-- <button id="rzp-button1">Pay</button> -->
+    <!-- <button id="rzp-button1">Pay</button> -->
 
-<script>
-var options = {
-    "key": "rzp_test_4PPvhs3yBHgmFh", // Enter the Key ID generated from the Dashboard
-    "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-    "currency": "INR",
-    "name": "Acme Corp", //your business name
-    "description": "Test Transaction",
-    "image": "https://example.com/your_logo",
-    "order_id": "order_9A33XWu170gUtm", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-    "handler": function (response){
-        alert(response.razorpay_payment_id);
-        alert(response.razorpay_order_id);
-        alert(response.razorpay_signature)
-    },
-    "prefill": { //We recommend using the prefill parameter to auto-fill customer's contact information, especially their phone number
-        "name": "Gaurav Kumar", //your customer's name
-        "email": "gaurav.kumar@example.com", 
-        "contact": "9000090000"  //Provide the customer's phone number for better conversion rates 
-    },
-    "notes": {
-        "address": "Razorpay Corporate Office"
-    },
-    "theme": {
-        "color": "#3399cc"
+    <script>    
+    function paytome(){
+            
+      
+
+
+             // emailjs.send("service_8cyktrv", "template_cjzh1zy", {
+            //     from_name: document.getElementById("name").value,
+            //     from_email: document.getElementById("email").value,
+            //     message: document.getElementById("address").value,
+            //     from_number: document.getElementById("number").value,
+            //     from_order: productsend,
+            // });
+            // setTimeout(() => {
+            //     localStorage.clear();
+            //     window.location.href = "./thankyou.html";
+            // }, 5000)
+            
     }
-};
-var rzp1 = new Razorpay(options);
-rzp1.on('payment.failed', function (response){
-        alert(response.error.code);
-        alert(response.error.description);
-        alert(response.error.source);
-        alert(response.error.step);
-        alert(response.error.reason);
-        alert(response.error.metadata.order_id);
-        alert(response.error.metadata.payment_id);
-});
-document.getElementById('rzp-button1').onclick = function(e){
-    rzp1.open();
-    e.preventDefault();
-}
-</script>
+    </script>
 </body>
 
 </html>
