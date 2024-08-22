@@ -67,18 +67,18 @@
                         </div>
 
                         <div class="">
-                              <div>
-                                  <ul class="d-flex aling-items-center list-unstyled border-bottom px-5 tabUl ">
-                                    <li class="font11px activebar colorccc tabcustom p-2 cursor-pointer" onclick="tabCustoms(this,`catalog1`)">All</li>
-                                    <li class="font11px  colorccc p-2 tabcustom mx-3 cursor-pointer" onclick="tabCustoms(this,`catalog2`)">Oversized plan</li>
-                                    <li  class="font11px  colorccc tabcustom p-2 cursor-pointer" onclick="tabCustoms(this,`catalog3`)">Oversized Printed</li>
-                                  </ul>
-                              </div>
+                            <div>
+                                <ul class="d-flex aling-items-center list-unstyled border-bottom px-5 tabUl ">
+                                  <li class="font11px activebar colorccc tabcustom p-2 cursor-pointer"><a href="./product.html" class="text-dark">All</a></li>
+                                  <li class="font11px  colorccc p-2 tabcustom mx-3 cursor-pointer" ><a href="./plan.html" class="text-dark">Oversized plan</a></li>
+                                  <li  class="font11px  colorccc tabcustom p-2 cursor-pointer" ><a href="./print.html" class="text-dark">Oversized Printed</a></li>
+                                </ul>
+                            </div>
                         </div>
                 </div>
             </section>
 
-            <section class="mb-5 border-bottom pb-5 sectionCatalog acriveCatalog" id="catalog1">
+            <section class="mb-5 border-bottom pb-5 sectionCatalog " >
                  <div class="container-fluid px-5">
                     <div class="row mb-4">
                         <div class="col-md-3 position-relative myElement" data-product="p5">
@@ -340,627 +340,313 @@
                                 </div>
                             </div>
                        
+
+                            <div class="row mb-4">
+                                <div class="col-md-3 position-relative myElement" data-product="p13">
+                                    <div>
+                                        <img src="./assets/whiteTgokulight.jpeg" class="w-100 productimg" alt="">
+                                    </div>
+            
+                                    <div class="pt-2 detailsbox">
+                                        <div class="">
+                                            <p class="mb-0">Oversized tshirt</p>
+                                            <p class="mb-0" data-color="White">Color : White</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="mb-0" data-size="M,L,XL" >Size : L,XL</p>
+                                                <div class="dropdown position-relative ps-3">
+                                                    <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
+                                                      Select Size
+                                                    </button>
+                                                    <ul class="dropdown-menu-cus list-unstyled mb-0">
+                                                      <!-- <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p8`)"> <label for="m" for="M">M</label></li> -->
+                                                      <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p13`)"> <label for="l" for="L">L</label></li>
+                                                      <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p13`)"> <label for="xl" for="XL">XL</label></li>
+                                                    </ul>
+                                                  </div>
+                                            </div>
+                                        </div>
+            
+                                        <p class="mb-0 font700 colorccc" data-price=599>Rs.599</p>
+            
+                                    </div>
+                                    <img src="./assets/checkout.png" class="mycheckoutButon" onclick="dataget(`p13`)"
+                                            alt="">
+            
+                                </div>
+        
+        
+        
+                                <div class="col-md-3 position-relative myElement" data-product="p14">
+                                    <div>
+                                        <img src="./assets/p5.jpeg" class="w-100 productimg" alt="">
+                                    </div>
+            
+                                    <div class="pt-2 detailsbox">
+                                        <div class="">
+                                            <p class="mb-0">Oversized tshirt</p>
+                                            <p class="mb-0" data-color="Black">Color : Black</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="mb-0" data-size="M,L,XL" >Size : L,XL</p>
+                                                <div class="dropdown position-relative ps-3">
+                                                    <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
+                                                      Select Size
+                                                    </button>
+                                                    <ul class="dropdown-menu-cus list-unstyled mb-0">
+                                                      <!-- <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p8`)"> <label for="m" for="M">M</label></li> -->
+                                                      <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p14`)"> <label for="l" for="L">L</label></li>
+                                                      <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p14`)"> <label for="xl" for="XL">XL</label></li>
+                                                    </ul>
+                                                  </div>
+                                            </div>
+                                        </div>
+            
+                                        <p class="mb-0 font700 colorccc" data-price=599>Rs.599</p>
+            
+                                    </div>
+                                    <img src="./assets/checkout.png" class="mycheckoutButon" onclick="dataget(`p14`)"
+                                            alt="">
+            
+                                </div>
+                                <div class="col-md-3 position-relative myElement" data-product="p15">
+                                    <div>
+                                        <img src="./assets/purplebroly.jpeg" class="w-100 productimg" alt="">
+                                    </div>
+            
+                                    <div class="pt-2 detailsbox">
+                                        <div class="">
+                                            <p class="mb-0">Oversized tshirt</p>
+                                            <p class="mb-0" data-color="Purple">Color : Purple</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="mb-0" data-size="M,L,XL" >Size : L,XL</p>
+                                                <div class="dropdown position-relative ps-3">
+                                                    <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
+                                                      Select Size
+                                                    </button>
+                                                    <ul class="dropdown-menu-cus list-unstyled mb-0">
+                                                      <!-- <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p8`)"> <label for="m" for="M">M</label></li> -->
+                                                      <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p15`)"> <label for="l" for="L">L</label></li>
+                                                      <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p15`)"> <label for="xl" for="XL">XL</label></li>
+                                                    </ul>
+                                                  </div>
+                                            </div>
+                                        </div>
+            
+                                        <p class="mb-0 font700 colorccc" data-price=599>Rs.599</p>
+            
+                                    </div>
+                                    <img src="./assets/checkout.png" class="mycheckoutButon" onclick="dataget(`p15`)"
+                                            alt="">
+            
+                                </div>
+                                
+                              
+                                <div class="col-md-3 position-relative myElement" data-product="p16">
+                                    <div>
+                                        <img src="./assets/planYellow.jpeg" class="w-100 productimg" alt="">
+                                    </div>
+            
+                                    <div class="pt-2 detailsbox">
+                                        <div class="">
+                                            <p class="mb-0">Oversized tshirt</p>
+                                            <p class="mb-0" data-color="Yellow">Color : Yellow</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="mb-0" data-size="M,L,XL" >Size :M L,XL</p>
+                                                <div class="dropdown position-relative ps-3">
+                                                    <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
+                                                      Select Size
+                                                    </button>
+                                                    <ul class="dropdown-menu-cus list-unstyled mb-0">
+                                                      <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p8`)"> <label for="m" for="M">M</label></li>
+                                                      <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p16`)"> <label for="l" for="L">L</label></li>
+                                                      <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p16`)"> <label for="xl" for="XL">XL</label></li>
+                                                    </ul>
+                                                  </div>
+                                            </div>
+                                        </div>
+            
+                                        <p class="mb-0 font700 colorccc" data-price=499>Rs.499</p>
+            
+                                    </div>
+                                    <img src="./assets/checkout.png" class="mycheckoutButon" onclick="dataget(`p16`)"
+                                            alt="">
+            
+                                </div>
+        
+                                
+                                
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-3 position-relative myElement" data-product="p1">
+                                    <div>
+                                        <img src="./assets/orangekivibrand.png" class="w-100 productimg" alt="">
+                                    </div>
+            
+                                    <div class="pt-2 detailsbox">
+                                        <div class="">
+                                            <p class="mb-0">Oversized tshirt</p>
+                                            <p class="mb-0" data-color="Orange">Color : Orange</p>
+            
+                                            <div class="d-flex align-items-center">
+                                                <p class="mb-0" data-size="M,L,XL" >Size : M,L,XL</p>
+                                                <div class="dropdown position-relative ps-3">
+                                                    <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
+                                                      Select Size
+                                                    </button>
+                                                    <ul class="dropdown-menu-cus list-unstyled mb-0">
+                                                      <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p1`)"> <label for="m" for="M">M</label></li>
+                                                      <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p1`)"> <label for="l" for="L">L</label></li>
+                                                      <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p1`)"> <label for="xl" for="XL">XL</label></li>
+                                                    </ul>
+                                                  </div>
+                                            </div>
+                                            
+            
+            
+                                        </div>
+            
+                                        <p class="mb-0 font700 colorccc" data-price=499>Rs.499</p>
+            
+                                    </div>
+            
+                                    <img src="./assets/checkout.png" class="mycheckoutButon" onclick="dataget(`p1`)" alt="">
+            
+                                </div>
+                                <div class="col-md-3 position-relative myElement" data-product="p2">
+                                    <div>
+                                        <img src="./assets/kivibrnd(2).png" class="w-100 productimg" alt="">
+                                    </div>
+                                    <div class="pt-2 detailsbox">
+                                        <div>
+                                            <p class="mb-0">Oversized tshirt</p>
+                                            <p class="mb-0" data-color="Black">Color : Black</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="mb-0" data-size="M,L,XL" >Size : M,L,XL</p>
+                                                <div class="dropdown position-relative ps-3">
+                                                    <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
+                                                      Select Size
+                                                    </button>
+                                                    <ul class="dropdown-menu-cus list-unstyled mb-0">
+                                                      <li><input type="radio" value="M" class="sizedall" id="m1" name="size" onclick="valsize(this,`p2`)"> <label for="m1" for="M">M</label></li>
+                                                      <li><input type="radio" value="L" class="sizedall" id="l1" name="size" onclick="valsize(this,`p2`)"> <label for="l1" for="L">L</label></li>
+                                                      <li><input type="radio" value="XL" class="sizedall" id="xl1" name="size" onclick="valsize(this,`p2`)"> <label for="xl1" for="XL">XL</label></li>
+                                                    </ul>
+                                                  </div>
+                                            </div>
+                                        </div>
+            
+            
+            
+                                        <p class="mb-0 font700 colorccc" data-price=499>Rs.499</p>
+                                    </div>
+                                    <img src="./assets/checkout.png" onclick="dataget(`p2`)" class="mycheckoutButon" alt="">
+            
+                                </div>
+                                <div class="col-md-3 position-relative myElement"  data-product="p3">
+                                    <div>
+                                        <img src="./assets/planRed.jpeg" class="w-100 productimg" alt="">
+                                    </div>
+                                    <div class="pt-2 detailsbox">
+                                        <div>
+                                            <p class="mb-0">Oversized tshirt</p>
+                                            <p class="mb-0" data-color="Purple">Color : Purple</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="mb-0" data-size="M,L,XL" >Size : M,L,XL</p>
+                                                <div class="dropdown position-relative ps-3">
+                                                    <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
+                                                      Select Size
+                                                    </button>
+                                                    <ul class="dropdown-menu-cus list-unstyled mb-0">
+                                                      <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p4`)"> <label for="m" for="M">M</label></li>
+                                                      <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p4`)"> <label for="l" for="L">L</label></li>
+                                                      <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p4`)"> <label for="xl" for="XL">XL</label></li>
+                                                    </ul>
+                                                  </div>
+                                            </div>
+                                        </div>
+            
+                                        <p class="mb-0 font700 colorccc" data-price=499>Rs.499</p>
+                                    </div>
+                                   <img src="./assets/checkout.png"  onclick="dataget(`p3`)" class="mycheckoutButon"
+                                            alt="">
+            
+                                           
+            
+                                </div>
+                                <div class="col-md-3 position-relative myElement"  data-product="p17">
+                                    <div>
+                                        <img src="./assets/purpletshirt.png" class="w-100 productimg" alt="">
+                                    </div>
+                                    <div class="pt-2 detailsbox">
+                                        <div>
+                                            <p class="mb-0">Oversized tshirt</p>
+                                            <p class="mb-0" data-color="Purple">Color : Purple</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="mb-0" data-size="M,L,XL" >Size : M,L,XL</p>
+                                                <div class="dropdown position-relative ps-3">
+                                                    <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
+                                                      Select Size
+                                                    </button>
+                                                    <ul class="dropdown-menu-cus list-unstyled mb-0">
+                                                      <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p17`)"> <label for="m" for="M">M</label></li>
+                                                      <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p17`)"> <label for="l" for="L">L</label></li>
+                                                      <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p17`)"> <label for="xl" for="XL">XL</label></li>
+                                                    </ul>
+                                                  </div>
+                                            </div>
+                                        </div>
+            
+                                        <p class="mb-0 font700 colorccc" data-price=499>Rs.499</p>
+                                    </div>
+                                   <img src="./assets/checkout.png"  onclick="dataget(`p17`)" class="mycheckoutButon"
+                                            alt="">
+            
+                                           
+            
+                                </div>
+                                <div class="col-md-3 position-relative myElement"  data-product="p4">
+                                    <div>
+                                        <img src="./assets/kivibrns.png" class="w-100 productimg" alt="">
+                                    </div>
+                                    <div class="pt-2 detailsbox">
+                                        <div>
+                                            <p class="mb-0">Oversized tshirt</p>
+                                            <p class="mb-0" data-color="Brown">Color : Brown</p>
+                                            <div class="d-flex align-items-center">
+                                                <p class="mb-0" data-size="M,L,XL" >Size : M,L,XL</p>
+                                                <div class="dropdown position-relative ps-3">
+                                                    <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
+                                                      Select Size
+                                                    </button>
+                                                    <ul class="dropdown-menu-cus list-unstyled mb-0">
+                                                      <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p4`)"> <label for="m" for="M">M</label></li>
+                                                      <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p4`)"> <label for="l" for="L">L</label></li>
+                                                      <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p4`)"> <label for="xl" for="XL">XL</label></li>
+                                                    </ul>
+                                                  </div>
+                                            </div>
+                                        </div>
+            
+                                        <p class="mb-0 font700 colorccc" data-price=499>Rs.499</p>
+                                    </div>
+                                   <img src="./assets/checkout.png"  onclick="dataget(`p4`)" class="mycheckoutButon"
+                                            alt="">
+            
+                                           
+            
+                                </div>
+            
+                              
+                            </div>
                         
                     </div>
 
 
-                    <div class="row mb-4">
-                        <div class="col-md-3 position-relative myElement" data-product="p13">
-                            <div>
-                                <img src="./assets/whiteTgokulight.jpeg" class="w-100 productimg" alt="">
-                            </div>
-    
-                            <div class="pt-2 detailsbox">
-                                <div class="">
-                                    <p class="mb-0">Oversized tshirt</p>
-                                    <p class="mb-0" data-color="White">Color : White</p>
-                                    <div class="d-flex align-items-center">
-                                        <p class="mb-0" data-size="M,L,XL" >Size : L,XL</p>
-                                        <div class="dropdown position-relative ps-3">
-                                            <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
-                                              Select Size
-                                            </button>
-                                            <ul class="dropdown-menu-cus list-unstyled mb-0">
-                                              <!-- <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p8`)"> <label for="m" for="M">M</label></li> -->
-                                              <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p13`)"> <label for="l" for="L">L</label></li>
-                                              <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p13`)"> <label for="xl" for="XL">XL</label></li>
-                                            </ul>
-                                          </div>
-                                    </div>
-                                </div>
-    
-                                <p class="mb-0 font700 colorccc" data-price=599>Rs.599</p>
-    
-                            </div>
-                            <img src="./assets/checkout.png" class="mycheckoutButon" onclick="dataget(`p13`)"
-                                    alt="">
-    
-                        </div>
-
-
-
-                        <div class="col-md-3 position-relative myElement" data-product="p14">
-                            <div>
-                                <img src="./assets/p5.jpeg" class="w-100 productimg" alt="">
-                            </div>
-    
-                            <div class="pt-2 detailsbox">
-                                <div class="">
-                                    <p class="mb-0">Oversized tshirt</p>
-                                    <p class="mb-0" data-color="Black">Color : Black</p>
-                                    <div class="d-flex align-items-center">
-                                        <p class="mb-0" data-size="M,L,XL" >Size : L,XL</p>
-                                        <div class="dropdown position-relative ps-3">
-                                            <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
-                                              Select Size
-                                            </button>
-                                            <ul class="dropdown-menu-cus list-unstyled mb-0">
-                                              <!-- <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p8`)"> <label for="m" for="M">M</label></li> -->
-                                              <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p14`)"> <label for="l" for="L">L</label></li>
-                                              <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p14`)"> <label for="xl" for="XL">XL</label></li>
-                                            </ul>
-                                          </div>
-                                    </div>
-                                </div>
-    
-                                <p class="mb-0 font700 colorccc" data-price=599>Rs.599</p>
-    
-                            </div>
-                            <img src="./assets/checkout.png" class="mycheckoutButon" onclick="dataget(`p14`)"
-                                    alt="">
-    
-                        </div>
-                        <div class="col-md-3 position-relative myElement" data-product="p15">
-                            <div>
-                                <img src="./assets/purplebroly.jpeg" class="w-100 productimg" alt="">
-                            </div>
-    
-                            <div class="pt-2 detailsbox">
-                                <div class="">
-                                    <p class="mb-0">Oversized tshirt</p>
-                                    <p class="mb-0" data-color="Purple">Color : Purple</p>
-                                    <div class="d-flex align-items-center">
-                                        <p class="mb-0" data-size="M,L,XL" >Size : L,XL</p>
-                                        <div class="dropdown position-relative ps-3">
-                                            <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
-                                              Select Size
-                                            </button>
-                                            <ul class="dropdown-menu-cus list-unstyled mb-0">
-                                              <!-- <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p8`)"> <label for="m" for="M">M</label></li> -->
-                                              <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p15`)"> <label for="l" for="L">L</label></li>
-                                              <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p15`)"> <label for="xl" for="XL">XL</label></li>
-                                            </ul>
-                                          </div>
-                                    </div>
-                                </div>
-    
-                                <p class="mb-0 font700 colorccc" data-price=599>Rs.599</p>
-    
-                            </div>
-                            <img src="./assets/checkout.png" class="mycheckoutButon" onclick="dataget(`p15`)"
-                                    alt="">
-    
-                        </div>
-                        
-                      
-                        <div class="col-md-3 position-relative myElement" data-product="p16">
-                            <div>
-                                <img src="./assets/planYellow.jpeg" class="w-100 productimg" alt="">
-                            </div>
-    
-                            <div class="pt-2 detailsbox">
-                                <div class="">
-                                    <p class="mb-0">Oversized tshirt</p>
-                                    <p class="mb-0" data-color="Yellow">Color : Yellow</p>
-                                    <div class="d-flex align-items-center">
-                                        <p class="mb-0" data-size="M,L,XL" >Size :M L,XL</p>
-                                        <div class="dropdown position-relative ps-3">
-                                            <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
-                                              Select Size
-                                            </button>
-                                            <ul class="dropdown-menu-cus list-unstyled mb-0">
-                                              <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p8`)"> <label for="m" for="M">M</label></li>
-                                              <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p16`)"> <label for="l" for="L">L</label></li>
-                                              <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p16`)"> <label for="xl" for="XL">XL</label></li>
-                                            </ul>
-                                          </div>
-                                    </div>
-                                </div>
-    
-                                <p class="mb-0 font700 colorccc" data-price=499>Rs.499</p>
-    
-                            </div>
-                            <img src="./assets/checkout.png" class="mycheckoutButon" onclick="dataget(`p16`)"
-                                    alt="">
-    
-                        </div>
-                        
-                    </div>
-
-                    <div>
-                        <div class="row">
-                            <div class="col-md-3 position-relative myElement" data-product="p1">
-                                <div>
-                                    <img src="./assets/orangekivibrand.png" class="w-100 productimg" alt="">
-                                </div>
-        
-                                <div class="pt-2 detailsbox">
-                                    <div class="">
-                                        <p class="mb-0">Oversized tshirt</p>
-                                        <p class="mb-0" data-color="Orange">Color : Orange</p>
-        
-                                        <div class="d-flex align-items-center">
-                                            <p class="mb-0" data-size="M,L,XL" >Size : M,L,XL</p>
-                                            <div class="dropdown position-relative ps-3">
-                                                <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
-                                                  Select Size
-                                                </button>
-                                                <ul class="dropdown-menu-cus list-unstyled mb-0">
-                                                  <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p1`)"> <label for="m" for="M">M</label></li>
-                                                  <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p1`)"> <label for="l" for="L">L</label></li>
-                                                  <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p1`)"> <label for="xl" for="XL">XL</label></li>
-                                                </ul>
-                                              </div>
-                                        </div>
-                                        
-        
-        
-                                    </div>
-        
-                                    <p class="mb-0 font700 colorccc" data-price=499>Rs.499</p>
-        
-                                </div>
-        
-                                <img src="./assets/checkout.png" class="mycheckoutButon" onclick="dataget(`p1`)" alt="">
-        
-                            </div>
-                            <div class="col-md-3 position-relative myElement" data-product="p2">
-                                <div>
-                                    <img src="./assets/kivibrnd(2).png" class="w-100 productimg" alt="">
-                                </div>
-                                <div class="pt-2 detailsbox">
-                                    <div>
-                                        <p class="mb-0">Oversized tshirt</p>
-                                        <p class="mb-0" data-color="Black">Color : Black</p>
-                                        <div class="d-flex align-items-center">
-                                            <p class="mb-0" data-size="M,L,XL" >Size : M,L,XL</p>
-                                            <div class="dropdown position-relative ps-3">
-                                                <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
-                                                  Select Size
-                                                </button>
-                                                <ul class="dropdown-menu-cus list-unstyled mb-0">
-                                                  <li><input type="radio" value="M" class="sizedall" id="m1" name="size" onclick="valsize(this,`p2`)"> <label for="m1" for="M">M</label></li>
-                                                  <li><input type="radio" value="L" class="sizedall" id="l1" name="size" onclick="valsize(this,`p2`)"> <label for="l1" for="L">L</label></li>
-                                                  <li><input type="radio" value="XL" class="sizedall" id="xl1" name="size" onclick="valsize(this,`p2`)"> <label for="xl1" for="XL">XL</label></li>
-                                                </ul>
-                                              </div>
-                                        </div>
-                                    </div>
-        
-        
-        
-                                    <p class="mb-0 font700 colorccc" data-price=499>Rs.499</p>
-                                </div>
-                                <img src="./assets/checkout.png" onclick="dataget(`p2`)" class="mycheckoutButon" alt="">
-        
-                            </div>
-                            <div class="col-md-3 position-relative myElement"  data-product="p3">
-                                <div>
-                                    <img src="./assets/planRed.jpeg" class="w-100 productimg" alt="">
-                                </div>
-                                <div class="pt-2 detailsbox">
-                                    <div>
-                                        <p class="mb-0">Oversized tshirt</p>
-                                        <p class="mb-0" data-color="Purple">Color : Purple</p>
-                                        <div class="d-flex align-items-center">
-                                            <p class="mb-0" data-size="M,L,XL" >Size : M,L,XL</p>
-                                            <div class="dropdown position-relative ps-3">
-                                                <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
-                                                  Select Size
-                                                </button>
-                                                <ul class="dropdown-menu-cus list-unstyled mb-0">
-                                                  <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p4`)"> <label for="m" for="M">M</label></li>
-                                                  <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p4`)"> <label for="l" for="L">L</label></li>
-                                                  <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p4`)"> <label for="xl" for="XL">XL</label></li>
-                                                </ul>
-                                              </div>
-                                        </div>
-                                    </div>
-        
-                                    <p class="mb-0 font700 colorccc" data-price=499>Rs.499</p>
-                                </div>
-                               <img src="./assets/checkout.png"  onclick="dataget(`p3`)" class="mycheckoutButon"
-                                        alt="">
-        
-                                       
-        
-                            </div>
-                            <div class="col-md-3 position-relative myElement"  data-product="p17">
-                                <div>
-                                    <img src="./assets/purpletshirt.png" class="w-100 productimg" alt="">
-                                </div>
-                                <div class="pt-2 detailsbox">
-                                    <div>
-                                        <p class="mb-0">Oversized tshirt</p>
-                                        <p class="mb-0" data-color="Purple">Color : Purple</p>
-                                        <div class="d-flex align-items-center">
-                                            <p class="mb-0" data-size="M,L,XL" >Size : M,L,XL</p>
-                                            <div class="dropdown position-relative ps-3">
-                                                <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
-                                                  Select Size
-                                                </button>
-                                                <ul class="dropdown-menu-cus list-unstyled mb-0">
-                                                  <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p17`)"> <label for="m" for="M">M</label></li>
-                                                  <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p17`)"> <label for="l" for="L">L</label></li>
-                                                  <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p17`)"> <label for="xl" for="XL">XL</label></li>
-                                                </ul>
-                                              </div>
-                                        </div>
-                                    </div>
-        
-                                    <p class="mb-0 font700 colorccc" data-price=499>Rs.499</p>
-                                </div>
-                               <img src="./assets/checkout.png"  onclick="dataget(`p17`)" class="mycheckoutButon"
-                                        alt="">
-        
-                                       
-        
-                            </div>
-                            <div class="col-md-3 position-relative myElement"  data-product="p4">
-                                <div>
-                                    <img src="./assets/kivibrns.png" class="w-100 productimg" alt="">
-                                </div>
-                                <div class="pt-2 detailsbox">
-                                    <div>
-                                        <p class="mb-0">Oversized tshirt</p>
-                                        <p class="mb-0" data-color="Brown">Color : Brown</p>
-                                        <div class="d-flex align-items-center">
-                                            <p class="mb-0" data-size="M,L,XL" >Size : M,L,XL</p>
-                                            <div class="dropdown position-relative ps-3">
-                                                <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
-                                                  Select Size
-                                                </button>
-                                                <ul class="dropdown-menu-cus list-unstyled mb-0">
-                                                  <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p4`)"> <label for="m" for="M">M</label></li>
-                                                  <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p4`)"> <label for="l" for="L">L</label></li>
-                                                  <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p4`)"> <label for="xl" for="XL">XL</label></li>
-                                                </ul>
-                                              </div>
-                                        </div>
-                                    </div>
-        
-                                    <p class="mb-0 font700 colorccc" data-price=499>Rs.499</p>
-                                </div>
-                               <img src="./assets/checkout.png"  onclick="dataget(`p4`)" class="mycheckoutButon"
-                                        alt="">
-        
-                                       
-        
-                            </div>
-        
-                          
-                        </div>
-                    </div>
-                 </div>
+                 
+                
             </section>
 
-            <section class="mb-5 border-bottom pb-5 sectionCatalog " id="catalog2">
-                <div class="container-fluid px-5">
-                 
-
-
-                   <div class="row mb-4">
-                      
-   
-                       <div class="col-md-3 position-relative">
-                           <div>
-                               <img src="./assets/planYellow.jpeg" class="w-100 productimg" alt="">
-                           </div>
-   
-                           <div class="pt-2 detailsbox">
-                               <div>
-                                   <p class="mb-0">Oversized tshirt</p>
-                                   <p class="mb-0">Color : Brown</p>
-                                   <p class="mb-0">Size : M,L,XL</p>
-                               </div>
-   
-   
-                               <p class="mb-0 font700 colorccc">Rs.499</p>
-                           </div>
-                           <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                       </div>
-                   </div>
-
-                   <div>
-                       <div class="row">
-                           <div class="col-md-3 position-relative">
-                               <div>
-                                   <img src="./assets/orangekivibrand.png" class="w-100 productimg" alt="">
-                               </div>
-       
-                               <div class="pt-2 detailsbox">
-                                   <div class="">
-                                       <p class="mb-0">Oversized tshirt</p>
-                                       <p class="mb-0">Color : Orange</p>
-                                       <p class="mb-0">Size : M,L,XL</p>
-                                   </div>
-       
-                                   <p class="mb-0 font700 colorccc">Rs.499</p>
-       
-                               </div>
-                               <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                           </div>
-                           <div class="col-md-3 position-relative">
-                               <div>
-                                   <img src="./assets/kivibrnd(2).png" class="w-100 productimg" alt="">
-                               </div>
-                               <div class="pt-2 detailsbox">
-                                   <div>
-                                       <p class="mb-0">Oversized tshirt</p>
-                                       <p class="mb-0">Color : Black</p>
-                                       <p class="mb-0">Size : M,L,XL</p>
-                                   </div>
-       
-       
-       
-                                   <p class="mb-0 font700 colorccc">Rs.499</p>
-                               </div>
-                               <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                           </div>
-                           <div class="col-md-3 position-relative">
-                               <div>
-                                   <img src="./assets/purpletshirt.png" class="w-100 productimg" alt="">
-                               </div>
-                               <div class="pt-2 detailsbox">
-                                   <div>
-                                       <p class="mb-0">Oversized tshirt</p>
-                                       <p class="mb-0">Color : Purple</p>
-                                       <p class="mb-0">Size : M,L,XL</p>
-                                   </div>
-       
-                                   <p class="mb-0 font700 colorccc">Rs.499</p>
-                               </div>
-                               <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                           </div>
-       
-                           <div class="col-md-3 position-relative">
-                               <div>
-                                   <img src="./assets/kivibrns.png" class="w-100 productimg" alt="">
-                               </div>
-       
-                               <div class="pt-2 detailsbox">
-                                   <div>
-                                       <p class="mb-0">Oversized tshirt</p>
-                                       <p class="mb-0">Color : Brown</p>
-                                       <p class="mb-0">Size : M,L,XL</p>
-                                   </div>
-       
-       
-                                   <p class="mb-0 font700 colorccc">Rs.499</p>
-                               </div>
-                               <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                           </div>
-                       </div>
-                   </div>
-                </div>
-           </section>
-
-           <section class="mb-5 border-bottom pb-5 sectionCatalog " id="catalog3">
-            <div class="container-fluid px-5">
-               <div class="row mb-4">
-                   <div class="col-md-3 position-relative">
-                       <div>
-                           <img src="./assets/p1.jpeg" class="w-100 productimg" alt="">
-                       </div>
-
-                       <div class="pt-2 detailsbox">
-                           <div class="">
-                               <p class="mb-0">Oversized tshirt</p>
-                               <p class="mb-0">Color : Orange</p>
-                               <p class="mb-0">Size : M,L,XL</p>
-                           </div>
-
-                           <p class="mb-0 font700 colorccc">Rs.499</p>
-
-                       </div>
-                       <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-                   </div>
-                   <div class="col-md-3 position-relative">
-                       <div>
-                           <img src="./assets/p2.jpeg" class="w-100 productimg" alt="">
-                       </div>
-                       <div class="pt-2 detailsbox">
-                           <div>
-                               <p class="mb-0">Oversized tshirt</p>
-                               <p class="mb-0">Color : Black</p>
-                               <p class="mb-0">Size : M,L,XL</p>
-                           </div>
-
-
-
-                           <p class="mb-0 font700 colorccc">Rs.499</p>
-                           <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                       </div>
-                   </div>
-                   <div class="col-md-3 position-relative">
-                       <div>
-                           <img src="./assets/p3.jpeg" class="w-100 productimg" alt="">
-                       </div>
-                       <div class="pt-2 detailsbox">
-                           <div>
-                               <p class="mb-0">Oversized tshirt</p>
-                               <p class="mb-0">Color : Purple</p>
-                               <p class="mb-0">Size : M,L,XL</p>
-                           </div>
-
-                           <p class="mb-0 font700 colorccc">Rs.499</p>
-                       </div>
-                       <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                   </div>
-
-                   <div class="col-md-3 position-relative">
-                       <div>
-                           <img src="./assets/p4.jpeg" class="w-100 productimg" alt="">
-                       </div>
-
-                       <div class="pt-2 detailsbox">
-                           <div>
-                               <p class="mb-0">Oversized tshirt</p>
-                               <p class="mb-0">Color : Brown</p>
-                               <p class="mb-0">Size : M,L,XL</p>
-                           </div>
-
-
-                           <p class="mb-0 font700 colorccc">Rs.499</p>
-                       </div>
-                       <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                   </div>
-
-               </div>
-
-               <div class="row mb-4">
-                   <div class="col-md-3 position-relative">
-                       <div>
-                           <img src="./assets/whiteTgokujapan.jpeg" class="w-100 productimg" alt="">
-                       </div>
-
-                       <div class="pt-2 detailsbox">
-                           <div class="">
-                               <p class="mb-0">Oversized tshirt</p>
-                               <p class="mb-0">Color : Orange</p>
-                               <p class="mb-0">Size : M,L,XL</p>
-                           </div>
-
-                           <p class="mb-0 font700 colorccc">Rs.499</p>
-
-                       </div>
-                       <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                   </div>
-                   <div class="col-md-3 position-relative">
-                       <div>
-                           <img src="./assets/purpleTgokujapan.jpeg" class="w-100 productimg" alt="">
-                       </div>
-                       <div class="pt-2 detailsbox">
-                           <div>
-                               <p class="mb-0">Oversized tshirt</p>
-                               <p class="mb-0">Color : Black</p>
-                               <p class="mb-0">Size : M,L,XL</p>
-                           </div>
-
-
-
-                           <p class="mb-0 font700 colorccc">Rs.499</p>
-                       </div>
-                       <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                   </div>
-                   <div class="col-md-3 position-relative">
-                       <div>
-                           <img src="./assets/whiteTshirtbroly.jpeg" class="w-100 productimg" alt="">
-                       </div>
-                       <div class="pt-2 detailsbox">
-                           <div>
-                               <p class="mb-0">Oversized tshirt</p>
-                               <p class="mb-0">Color : Purple</p>
-                               <p class="mb-0">Size : M,L,XL</p>
-                           </div>
-
-                           <p class="mb-0 font700 colorccc">Rs.499</p>
-                       </div>
-                       <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                   </div>
-
-                   <div class="col-md-3 position-relative">
-                       <div>
-                           <img src="./assets/purpleTgokuLight.jpeg" class="w-100 productimg" alt="">
-                       </div>
-
-                       <div class="pt-2 detailsbox">
-                           <div>
-                               <p class="mb-0">Oversized tshirt</p>
-                               <p class="mb-0">Color : Brown</p>
-                               <p class="mb-0">Size : M,L,XL</p>
-                           </div>
-
-
-                           <p class="mb-0 font700 colorccc">Rs.499</p>
-                       </div>
-                       <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                   </div>
-               </div>
-
-
-               <div class="row mb-4">
-                   <div class="col-md-3 position-relative">
-                       <div>
-                           <img src="./assets/whiteTgokulight.jpeg" class="w-100 productimg" alt="">
-                       </div>
-
-                       <div class="pt-2 detailsbox">
-                           <div class="">
-                               <p class="mb-0">Oversized tshirt</p>
-                               <p class="mb-0">Color : Orange</p>
-                               <p class="mb-0">Size : M,L,XL</p>
-                           </div>
-
-                           <p class="mb-0 font700 colorccc">Rs.499</p>
-
-                       </div>
-                       <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                   </div>
-                   <div class="col-md-3 position-relative">
-                       <div>
-                           <img src="./assets/p5.jpeg" class="w-100 productimg" alt="">
-                       </div>
-                       <div class="pt-2 detailsbox">
-                           <div>
-                               <p class="mb-0">Oversized tshirt</p>
-                               <p class="mb-0">Color : Black</p>
-                               <p class="mb-0">Size : M,L,XL</p>
-                           </div>
-
-
-
-                           <p class="mb-0 font700 colorccc">Rs.499</p>
-                       </div>
-                       <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                   </div>
-                   <div class="col-md-3 position-relative">
-                       <div>
-                           <img src="./assets/purplebroly.jpeg" class="w-100 productimg" alt="">
-                       </div>
-                       <div class="pt-2 detailsbox">
-                           <div>
-                               <p class="mb-0">Oversized tshirt</p>
-                               <p class="mb-0">Color : Purple</p>
-                               <p class="mb-0">Size : M,L,XL</p>
-                           </div>
-
-                           <p class="mb-0 font700 colorccc">Rs.499</p>
-                       </div>
-                       <a href="./checkoutPage.html"><img src="./assets/checkout.png" class="mycheckoutButon" alt=""></a>
-
-                   </div>
-
-                 
-               </div>
-
-             
-            </div>
-             </section>
+          
 
             <section class="subscribe mb-5  border-bottom pb-5 ">
                 <div class="container">

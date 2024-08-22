@@ -62,7 +62,7 @@
 
 
     <section class=" border-bottom  checkoutsection  checkoutcontainersection">
-       
+
         <div class="container-fluid ps-4">
             <div class="d-flex productscreen">
                 <div class="productboxwidth py-5 pb-5">
@@ -154,7 +154,7 @@
                                 <label for="">Full Address</label>
                                 <span>Full Address</span>
                             </div>
-                            <input type="button" class="w-100 p-2 submitButton border-0" value="Pay" class="btn" 
+                            <input type="button" class="w-100 p-2 submitButton border-0" value="Pay" class="btn"
                                 onclick="orderplace(this)" />
                             <div class="d-flex align-items-center justify-content-center">
                                 <div class="spinner-border text-primary" role="status" id="spinner">
@@ -193,13 +193,22 @@
     </script>
     <script>
         function orderplace(val) {
+
             
-            val.style.display = "none"
+
+            if( document.getElementById("email").value.length>4 &&  document.getElementById("number").value>9 &&  document.getElementById("address").value.length >0 &&document.getElementById("name").value.length >0 ){
+                val.style.display = "none"
             document.getElementById("spinner").style.display = "block"
-            setTimeout(()=>{
-                document.getElementById("exampleModal").style.display="none"
-            },2000)
-            paytome()
+            setTimeout(() => {
+                document.getElementById("exampleModal").style.display = "none"
+            }, 2000)
+                paytome()
+            }
+
+            else[
+                alert("Please Recheck All Field")
+            ]
+           
         }
 
     </script>
@@ -304,8 +313,6 @@
 
 
         function incrementValue(e) {
-
-
             e.preventDefault();
 
             var fieldName = $(e.target).data("field");
@@ -398,25 +405,60 @@
 
     <!-- <button id="rzp-button1">Pay</button> -->
 
-    <script>    
-    function paytome(){
-            
-      
+    <script>
+        function paytome() {
+ 
+            let productsend = []
+            JSON.parse(localStorage.getItem('ProductKey')).forEach(element => {
+                productsend.push([element.id,
+                element.count, element.size, element.staticprice])
+            });
 
+            setTimeout(() => {
+                var options = {
+                    "key": "rzp_test_4PPvhs3yBHgmFh",
+                    "amount": productsend[0][3],
+                    "currency": "INR",
+                    "name": "Merchant Name",
+                    "description": "Purchase Description",
+                    "image": "https://example.com/your_logo",
+                    "handler": function (response) {
+                        alert("Payment Successful!");
+                        emailjs.send("service_8cyktrv", "template_cjzh1zy", {
+                            from_name: [document.getElementById("name").value,response.razorpay_payment_id],
+                            from_email: document.getElementById("email").value,
+                            message: document.getElementById("address").value,
+                            from_number: document.getElementById("number").value,
+                            from_order: productsend,
+                        });
+                        setTimeout(() => {
+                            localStorage.clear();
+                            window.location.href = "./thankyou.html";
+                        }, 2000)
 
-             // emailjs.send("service_8cyktrv", "template_cjzh1zy", {
-            //     from_name: document.getElementById("name").value,
-            //     from_email: document.getElementById("email").value,
-            //     message: document.getElementById("address").value,
-            //     from_number: document.getElementById("number").value,
-            //     from_order: productsend,
-            // });
-            // setTimeout(() => {
-            //     localStorage.clear();
-            //     window.location.href = "./thankyou.html";
-            // }, 5000)
-            
-    }
+                        // Send payment details to the server
+                        fetch('/your-server-endpoint', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                payment_id: response.razorpay_payment_id,
+                                order_id: response.razorpay_order_id,
+                                signature: response.razorpay_signature
+                            })
+                        }).then(response => {
+                            // Handle server response
+                        }).catch(error => {
+                            console.error("Error processing payment:", error);
+                        });
+                    }
+                };
+
+                var rzp1 = new Razorpay(options);
+                rzp1.open();
+            }, 2000)
+        }
     </script>
 </body>
 

@@ -450,6 +450,7 @@ header{
     pointer-events: none;
     z-index: 1000;
     transition: 0.5s;
+    background-color: #9bd98f;
   }
   
   .input-container.textarea label {
@@ -515,6 +516,7 @@ header{
     transform: translateY(-50%);
     left: 25px;
     font-size: 0.8rem;
+    background-color:#9bd98f!important; 
   }
   
   .input-container.focus span:before,
