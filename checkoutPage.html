@@ -413,11 +413,17 @@
                 productsend.push([element.id,
                 element.count, element.size, element.staticprice])
             });
+            let totalAmount = 0;
+            let products = JSON.parse(localStorage.getItem("ProductKey"));
+
+            for (let index = 0; index < products.length; index++) {
+                totalAmount += parseInt(products[index].staticprice);
+            }
 
             setTimeout(() => {
                 var options = {
-                    "key": "rzp_test_4PPvhs3yBHgmFh",
-                    "amount": productsend[0][3],
+                    "key": "rzp_live_swfJPMUZmt2Gqr",
+                    "amount": `${totalAmount}00`,
                     "currency": "INR",
                     "name": "Merchant Name",
                     "description": "Purchase Description",
