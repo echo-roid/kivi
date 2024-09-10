@@ -81,6 +81,37 @@
             <section class="mb-5 border-bottom pb-5 sectionCatalog acriveCatalog" >
                  <div class="container-fluid px-5">
                     <div class="row mb-4">
+                        <div class="col-md-3 position-relative myElement" data-product="p20">
+                            <div>
+                                <img src="./assets/badman.jpeg" class="w-100 productimg" alt="">
+                            </div>
+    
+                            <div class="pt-2 detailsbox">
+                                <div class="">
+                                    <p class="mb-0">Oversized tshirt</p>
+                                    <p class="mb-0" data-color="White">Color : White</p>
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0" data-size="L,XL" >Size :M L,XL</p>
+                                        <div class="dropdown position-relative ps-3">
+                                            <button class="btn btn-secondary selectsize" type="button" onclick="selectorOpen(this)">
+                                              Select Size
+                                            </button>
+                                            <ul class="dropdown-menu-cus list-unstyled mb-0">
+                                              <li><input type="radio" value="M" class="sizedall" id="m" name="size" onclick="valsize(this,`p20`)"> <label for="m" for="M">M</label></li>
+                                              <li><input type="radio" value="L" class="sizedall" id="l" name="size" onclick="valsize(this,`p20`)"> <label for="l" for="L">L</label></li>
+                                              <li><input type="radio" value="XL" class="sizedall" id="xl" name="size" onclick="valsize(this,`p20`)"> <label for="xl" for="XL">XL</label></li>
+                                            </ul>
+                                          </div>
+                                    </div>
+                                </div>
+    
+                                <p class="mb-0 font700 colorccc" data-price=599>Rs.699</p>
+    
+                            </div>
+                            <img src="./assets/checkout.png" class="mycheckoutButon" onclick="dataget(`p20`)"
+                                    alt="">
+    
+                        </div>
                         <div class="col-md-3 position-relative myElement" data-product="p5">
                             <div>
                                 <img src="./assets/p1.jpeg" class="w-100 productimg" alt="">

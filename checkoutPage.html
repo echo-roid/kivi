@@ -297,7 +297,7 @@
 
             document.getElementById("itemsT").innerHTML = "Total Items : " + products.length
 
-            if (totalAmount > 999) {
+            if (totalAmount > 799) {
                 document.getElementById("Delivery").innerHTML = "Delivery Fees: 0"
             }
             else {
@@ -418,6 +418,12 @@
 
             for (let index = 0; index < products.length; index++) {
                 totalAmount += parseInt(products[index].staticprice);
+                if(totalAmount < 799){
+                    totalAmount -=50 
+                }
+                else{
+                    totalAmount 
+                }
             }
 
             setTimeout(() => {
